@@ -1,0 +1,49 @@
+---
+project:
+  wokwi_id:    0
+
+  source_files:
+    - grey.v
+    - dwisehart_ring_grey_top.v
+  top_module:  "dwisehart_top"
+
+yaml_version: 3.0
+
+documentation:
+  author:       "Daniel Wisehart"
+  title:        ""      # Project title
+  language:     "Verilog"
+  description:  ""      # Short description of what your project does
+
+  how_it_works: |
+      Explain how your project works
+
+  how_to_test:  |
+      Explain how to test your project
+
+  inputs:
+    - clock
+    - reset
+    - select[5]
+    - select[4]
+    - select[3]
+    - select[2]
+    - select[1]
+    - select[0]
+
+  outputs:
+    - output[7]
+    - output[6]
+    - output[5]
+    - output[4]
+    - output[3]
+    - output[2]
+    - output[1]
+    - output[0]
+
+  tag:          "counter, grey, test"
+  external_hw:  ""
+  discord:      "danielwyo#2929"
+  doc_link:     ""
+  clock_hz:     any
+  picture:      ""
