@@ -6,21 +6,13 @@
    input        CLK,
    input        RST,
    input [5:0]  SEL,
-   input [59:0] INIT,
 
-   output [4:0] ONES,
-   output [4:0] TENS,
-   output [4:0] HUND,
-   output [4:0] THOU,
-   output [4:0] TEN_THOU,
-   output [4:0] HUN_THOU,
-   output [4:0] MIL,
-   output [4:0] TEN_MIL,
-   output [4:0] HUN_MIL,
-   output [4:0] BIL,
-   output [4:0] TEN_BIL,
-   output [4:0] HUN_BIL,
-   output [7:0] IO_OUT
+   output       O_CLK_005,
+   output       O_CLK_011,
+   output       O_CLK_023,
+   output       O_CLK_047,
+   output       O_CLK_097,
+   output       O_CLK_197
   );
 
    initial begin
@@ -29,23 +21,11 @@
       #1;
    end
 
-    grey m_grey
-    (
-     .io_in  ({ SEL, RST, CLK }),
-     .init   ( INIT ),
-     .hunB   ( HUN_BIL ),
-     .tenB   ( TEN_BIL ),
-     .bil    ( BIL ),
-     .hunM   ( HUN_MIL ),
-     .tenM   ( TEN_MIL ),
-     .mil    ( MIL ),
-     .hunT   ( HUN_THOU ),
-     .tenT   ( TEN_THOU ),
-     .thou   ( THOU ),
-     .hund   ( HUND ),
-     .tens   ( TENS ),
-     .ones   ( ONES ),
-     .io_out ( IO_OUT )
-    );
+   ringd #( .pSTAGES(   5 ) ) m_ring005d( .o_clk( O_CLK_005 ) );
+   ringd #( .pSTAGES(  11 ) ) m_ring011d( .o_clk( O_CLK_011 ) );
+   ringd #( .pSTAGES(  23 ) ) m_ring023d( .o_clk( O_CLK_023 ) );
+   ringd #( .pSTAGES(  47 ) ) m_ring047d( .o_clk( O_CLK_047 ) );
+   ringd #( .pSTAGES(  97 ) ) m_ring097d( .o_clk( O_CLK_097 ) );
+   ringd #( .pSTAGES( 197 ) ) m_ring197d( .o_clk( O_CLK_197 ) );
 
 endmodule

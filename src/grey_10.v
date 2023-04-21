@@ -28,7 +28,6 @@
         r_cnt             <= pZERO;
      else
        r_cnt              <= f_next( r_cnt );
-       endcase
 
 ////////////////////////////////////////
    reg          r_clk_div;

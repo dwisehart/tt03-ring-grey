@@ -2,8 +2,8 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 
-VERILOG_SOURCES += \
-	${PWD}/ring.v \
+VERILOG_SOURCES +=      \
+	${PWD}/ringd.v \
 	$(PWD)/tb.v
 
 TOPLEVEL = tb

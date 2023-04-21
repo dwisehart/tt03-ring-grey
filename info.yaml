@@ -4,16 +4,16 @@ project:
 
   source_files:
     - grey.v
-    - dwisehart_ring_grey_top.v
-  top_module:  "dwisehart_top"
+    - dwisehart_ring_top.v
+  top_module:  "dwisehart_ring_top"
 
 yaml_version: 3.0
 
 documentation:
   author:       "Daniel Wisehart"
-  title:        ""      # Project title
+  title:        "Ring oscillator with skew correction"
   language:     "Verilog"
-  description:  ""      # Short description of what your project does
+  description:  "Fixing the problem of skew in a ring oscillator with a differential clock ring. "
 
   how_it_works: |
       Explain how your project works
