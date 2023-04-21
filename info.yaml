@@ -4,6 +4,7 @@ project:
 
   source_files:
     - grey_10.v
+    - ringd.v
     - dwisehart_ring_top.v
   top_module:  "dwisehart_ring_top"
 
