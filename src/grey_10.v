@@ -20,26 +20,42 @@
    localparam pNINE        = 'b10000;
 
 ////////////////////////////////////////
+   reg [7:0]    r_rst  = 'hFF;
+   wire         w_rst  = r_rst[7];
+
+   always @( posedge i_clk )
+     if( i_rst )
+       r_rst          <= 'hFF;
+     else
+       r_rst          <= { r_rst, 1'b0 };
+
+////////////////////////////////////////
    reg [4:0]    r_cnt;
    assign       o_cnt      = r_cnt;
 
    always @( posedge i_clk )
-     if( i_rst )
+     if( w_rst )
         r_cnt             <= pZERO;
      else
        r_cnt              <= f_next( r_cnt );
 
 ////////////////////////////////////////
-   reg          r_clk_div;
+   reg          r_clk_div, r_start;
    assign       o_clk_div  = r_clk_div;
 
    always @( posedge i_clk )
-     if( i_rst )
-        r_clk_div         <= 'b0;
+     if( w_rst ) begin
+        r_clk_div            <= 'b1;
+        r_start              <= 'b1;
+     end
      else
-       casex({ r_cnt == pFOUR, r_cnt == pNINE })
-         'b1x:    r_clk_div  <= 'b1;
-         'b01:    r_clk_div  <= 'b0;
+       casex({ r_cnt == pFOUR, r_cnt == pNINE, r_start })
+         'b1xx:   r_clk_div  <= 'b1;
+         'b01x:   r_clk_div  <= 'b0;
+         'b001: begin
+            r_clk_div        <= 'b0;
+            r_start          <= 'b0;
+         end
          default: r_clk_div  <= r_clk_div;
        endcase
 
