@@ -159,7 +159,7 @@
 
    always @( posedge i_clk )
      if( w_rst ) begin
-        r_cnt             <= 'd0;
+        r_state           <= 'd0;
         r_LED             <= 'd0;
      end
      else
