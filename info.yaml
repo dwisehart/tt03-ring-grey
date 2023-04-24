@@ -34,25 +34,25 @@ documentation:
 
   how_to_test:  |
       After not reset is desasserted, set the bits of select to read one of the grey counters.  The outputs should
-      change each half second with something like "7 6 2 ." over two seconds and then repeat.  This says the divided
-      ratio is 762:1.  The table belows shows what is being measured and what the divide ratio is.  The clock number
-      is the number of stages in its ring buffer.  In hardware, the only clock that is running is clock 097, which
-      actually has 93 stages.
+      change each half second with something like "7 6 2 ." over two seconds and then repeats.  If a value is not a
+      good one, a minus sign is shown instead.  A 762. says the divided ratio is 762:1.  The table belows shows what
+      is being measured and what the divide ratio is.  The clock number is the number of stages in its ring buffer.
+      In hardware, the only clock that is running is clock 097, which actually has 93 stages.
 
-      \begin{tabular}{rrl}
+      \begin{tabular}{llr}
       Select input & counter                 & divisor \\
-      000001        & clock 005 vs scan clock & 01,300 \\
-      000011        & clock 011 vs scan clock & 00,600 \\
-      000111        & clock 023 vs scan clock & 00,290 \\
-      000110        & clock 047 vs scan clock & 00,140 \\
-      001110        & clock 097 vs scan clock & 00,069 \\
-      001100        & clock 005 vs clock 011  & 01,500 \\
-      011100        & clock 005 vs clock 023  & 03,000 \\
-      011000        & clock 005 vs clock 047  & 06,000 \\
-      111000        & clock 011 vs clock 023  & 12,000 \\
-      110000        & clock 011 vs clock 047  & 01,500 \\
-      100000        & clock 023 vs clock 047  & 03,000 \\
-      default       & digits 4 5 6 . repeat   & n/a    \\
+      000001       & clock 005 vs scan clock & 01,300  \\
+      000011       & clock 011 vs scan clock & 00,600  \\
+      000111       & clock 023 vs scan clock & 00,290  \\
+      000110       & clock 047 vs scan clock & 00,140  \\
+      001110       & clock 097 vs scan clock & 00,069  \\
+      001100       & clock 005 vs clock 011  & 01,500  \\
+      011100       & clock 005 vs clock 023  & 03,000  \\
+      011000       & clock 005 vs clock 047  & 06,000  \\
+      111000       & clock 011 vs clock 023  & 12,000  \\
+      110000       & clock 011 vs clock 047  & 01,500  \\
+      100000       & clock 023 vs clock 047  & 03,000  \\
+      default      & digits 4 5 6 . repeat   & n/a     \\
       \end{tabular}
 
   inputs:
