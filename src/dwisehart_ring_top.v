@@ -14,7 +14,6 @@ module dwisehart_ring_top
    ringd #( .pSTAGES(  47 ) ) m_ring047d( .o_clk( w_clk_047 ) );
 //   ringd #( .pSTAGES(  97 ) ) m_ring097d( .o_clk( w_clk_097 ) );
 //   ringd #( .pSTAGES( 197 ) ) m_ring197d( .o_clk( w_clk_197 ) );
-   assign io_out [7:4]  = 'd0;
 
    wire       i_clk  = io_in[0];
    wire       i_rst  = io_in[1];
