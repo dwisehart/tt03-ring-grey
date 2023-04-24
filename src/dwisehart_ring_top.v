@@ -7,7 +7,7 @@ module dwisehart_ring_top
  output [7:0] io_out
 );
 
-   wire       w_clk_005, w_clk_011, w_clk_023, w_clk_047;
+   wire       w_clk_005, w_clk_011, w_clk_023, w_clk_047, w_clk_097, w_clk_197;
 //   ringd #( .pSTAGES(   5 ) ) m_ring005d( .o_clk( w_clk_005 ) );
 //   ringd #( .pSTAGES(  11 ) ) m_ring011d( .o_clk( w_clk_011 ) );
    ringd #( .pSTAGES(  23 ) ) m_ring023d( .o_clk( w_clk_023 ) );
