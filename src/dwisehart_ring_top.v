@@ -11,8 +11,8 @@ module dwisehart_ring_top
 //   ringd #( .pSTAGES(   5 ) ) m_ring005d( .o_clk( w_clk_005 ) );
 //   ringd #( .pSTAGES(  11 ) ) m_ring011d( .o_clk( w_clk_011 ) );
 //   ringd #( .pSTAGES(  23 ) ) m_ring023d( .o_clk( w_clk_023 ) );
-   ringd #( .pSTAGES(  47 ) ) m_ring047d( .o_clk( w_clk_047 ) );
-//   ringd #( .pSTAGES(  97 ) ) m_ring097d( .o_clk( w_clk_097 ) );
+//   ringd #( .pSTAGES(  47 ) ) m_ring047d( .o_clk( w_clk_047 ) );
+   ringd #( .pSTAGES(  97 ) ) m_ring097d( .o_clk( w_clk_097 ) );
 //   ringd #( .pSTAGES( 197 ) ) m_ring197d( .o_clk( w_clk_197 ) );
 
    wire       i_clk  = io_in[0];
