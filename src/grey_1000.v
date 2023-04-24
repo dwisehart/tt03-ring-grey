@@ -6,8 +6,7 @@
    input        i_clk, i_rst,
    output [4:0] o_100,
    output [4:0] o_010,
-   output [4:0] o_001,
-   output       o_clk_div
+   output [4:0] o_001
   );
 
    wire         w_clk_001;
@@ -33,7 +32,7 @@
     .i_clk     ( w_clk_010 ),
     .i_rst     ( i_rst ),
     .o_cnt     ( o_100 ),
-    .o_clk_div ( o_clk_div )
+    .o_clk_div ()
    );
 
 endmodule

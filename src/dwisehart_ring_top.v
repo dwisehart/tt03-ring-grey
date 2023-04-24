@@ -8,9 +8,9 @@ module dwisehart_ring_top
 );
 
    wire       w_clk_005, w_clk_011, w_clk_023, w_clk_047, w_clk_097, w_clk_197;
-//   ringd #( .pSTAGES(   5 ) ) m_ring005d( .o_clk( w_clk_005 ) );
+   ringd #( .pSTAGES(   5 ) ) m_ring005d( .o_clk( w_clk_005 ) );
    ringd #( .pSTAGES(  11 ) ) m_ring011d( .o_clk( w_clk_011 ) );
-   ringd #( .pSTAGES(  23 ) ) m_ring023d( .o_clk( w_clk_023 ) );
+//   ringd #( .pSTAGES(  23 ) ) m_ring023d( .o_clk( w_clk_023 ) );
 //   ringd #( .pSTAGES(  47 ) ) m_ring047d( .o_clk( w_clk_047 ) );
 //   ringd #( .pSTAGES(  97 ) ) m_ring097d( .o_clk( w_clk_097 ) );
 //   ringd #( .pSTAGES( 197 ) ) m_ring197d( .o_clk( w_clk_197 ) );
@@ -37,8 +37,7 @@ module dwisehart_ring_top
      .i_rst     ( w_rst ),
      .o_100     ( w_100_005 ),
      .o_010     ( w_010_005 ),
-     .o_001     ( w_001_005 ),
-     .o_clk_div ()
+     .o_001     ( w_001_005 )
    );
 
    wire [4:0]   w_100_011, w_010_011, w_001_011;
@@ -48,8 +47,7 @@ module dwisehart_ring_top
      .i_rst     ( w_rst ),
      .o_100     ( w_100_011 ),
      .o_010     ( w_010_011 ),
-     .o_001     ( w_001_011 ),
-     .o_clk_div ()
+     .o_001     ( w_001_011 )
    );
 
    wire [4:0]   w_100_023, w_010_023, w_001_023;
@@ -59,8 +57,7 @@ module dwisehart_ring_top
      .i_rst     ( w_rst ),
      .o_100     ( w_100_023 ),
      .o_010     ( w_010_023 ),
-     .o_001     ( w_001_023 ),
-     .o_clk_div ()
+     .o_001     ( w_001_023 )
    );
 
    wire [4:0]   w_100_047, w_010_047, w_001_047;
@@ -70,8 +67,7 @@ module dwisehart_ring_top
      .i_rst     ( w_rst ),
      .o_100     ( w_100_047 ),
      .o_010     ( w_010_047 ),
-     .o_001     ( w_001_047 ),
-     .o_clk_div ()
+     .o_001     ( w_001_047 )
    );
 
    wire [4:0]   w_100_097, w_010_097, w_001_097;
@@ -81,8 +77,7 @@ module dwisehart_ring_top
      .i_rst     ( w_rst ),
      .o_100     ( w_100_097 ),
      .o_010     ( w_010_097 ),
-     .o_001     ( w_001_097 ),
-     .o_clk_div ()
+     .o_001     ( w_001_097 )
    );
 
 
