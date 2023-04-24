@@ -8,6 +8,8 @@ project:
     - slow_grey.v
     - capture.v
     - ringd.v
+    - scan.v
+    - LED.v
     - dwisehart_ring_top.v
   top_module:  "dwisehart_ring_top"
 

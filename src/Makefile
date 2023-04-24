@@ -21,6 +21,8 @@ else
   VERILOG_SOURCES +=                                \
 			$(PWD)/dwisehart_ring_top.v \
 			$(PWD)/ringd.v              \
+			$(PWD)/scan.v               \
+			$(PWD)/LED.v                \
 			$(PWD)/capture.v            \
 			$(PWD)/grey_1000.v          \
 			$(PWD)/grey_10.v            \

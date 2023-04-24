@@ -4,11 +4,12 @@
   module LED
   (
    input        i_clk, i_rst,
-   input [4:0]  i_grey
+   input [4:0]  i_grey,
 
    output [7:0] o_led
   );
 
+////////////////////////////////////////
    localparam pZERO        = 'b10001;
    localparam pONE         = 'b00001;
    localparam pTWO         = 'b00011;
@@ -21,6 +22,10 @@
    localparam pNINE        = 'b10000;
 
    localparam pDP          = 'b10101;  // Decimal point.
+
+////////////////////////////////////////
+   reg [4:0]    r_led;
+   assign       o_led  = r_led;
 
    always @( posedge i_clk )
      if( i_rst )
